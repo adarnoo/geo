@@ -222,6 +222,7 @@ button:hover {
 
 /* Shop Styling */
 .ge-shop-feed-container {
+  position: relative;
   width: 100%;
   padding-top: 25px;
 }
@@ -282,6 +283,24 @@ button:hover {
 }
 .ge-shop-product-image img {
   border: 1px solid black;
+}
+
+.ge-pop-up-container {
+  position: absolute;
+  bottom: 75px;
+  right: 200px;
+  border: 1px solid black;
+  width: 15%;
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.ge-pop-up-title {
+  text-transform: uppercase;
+  font-size: 2.7vw;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=default.css.map */
