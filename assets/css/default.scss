@@ -395,18 +395,31 @@ button:hover {
 
 .ge-pop-up-container {
   position: absolute;
-  bottom: 75px;
-  right: 200px;
+  bottom: 100px;
+  right: 20px;
   border: 1px solid black;
-  width: 15%;
+  width: 200px;
   background-color: lightgrey;
   padding: 10px;
+
+  @include max-tablet-landscape {
+    bottom: 50px;
+    width: 175px;
+  }
+
+  @include max-tablet-portrait {
+    display: none;
+  }
 }
 
 .ge-pop-up-title {
   text-transform: uppercase;
-  font-size: 2.7vw;
+  font-size: 35px;
   text-align: center;
   width: 100%;
   padding-bottom: 5px;
+
+  @include max-tablet-landscape {
+    font-size: 30px;
+  }
 }
