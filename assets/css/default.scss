@@ -390,6 +390,11 @@ button:hover {
 
    img {
      border: 1px solid black;
+
+     &:hover {
+       cursor: pointer;
+       border: 1px solid red;
+     }
    }
 }
 

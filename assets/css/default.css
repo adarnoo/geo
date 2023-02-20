@@ -284,6 +284,10 @@ button:hover {
 .ge-shop-product-image img {
   border: 1px solid black;
 }
+.ge-shop-product-image img:hover {
+  cursor: pointer;
+  border: 1px solid red;
+}
 
 .ge-pop-up-container {
   position: absolute;
