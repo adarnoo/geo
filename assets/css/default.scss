@@ -143,7 +143,7 @@ button:hover {
 /* Header Styling */
 
 .ge-header-container {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -182,6 +182,7 @@ button:hover {
 
 .ge-feed-container {
   width: 100%;
+  margin-top: -5px;
 }
 
 .ge-feed-split-container {
@@ -202,6 +203,7 @@ button:hover {
 
 .ge-footer-container {
   position: relative;
+  display: flex;
   background-color: $ge-red;
   text-transform: uppercase;
   padding: 5px;
@@ -218,9 +220,11 @@ button:hover {
   list-style: none !important;
   width: 50%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .ge-footer-list {
+  width: 50%;
   padding-right: 100px;
 
   a {
@@ -232,14 +236,14 @@ button:hover {
 }
 
 .ge-footer-cta {
-  position: absolute;
-  top: 0;
-  left: 0;
   font-size: 8vw;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  margin-left: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ge-footer-list-container {
+  display: flex;
 }
