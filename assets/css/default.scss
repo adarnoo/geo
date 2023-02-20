@@ -201,9 +201,12 @@ button:hover {
 /* Footer Styling */
 
 .ge-footer-container {
+  position: relative;
   background-color: $ge-red;
   text-transform: uppercase;
   padding: 5px;
+  border: 1px solid black;
+  border-top: 0px;
 }
 
 .ge-footer-title {
@@ -213,4 +216,30 @@ button:hover {
 
 .ge-footer-section {
   list-style: none !important;
+  width: 50%;
+  display: flex;
+}
+
+.ge-footer-list {
+  padding-right: 100px;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.ge-footer-cta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 8vw;
+  width: 50%;
+  height: 100%;
+  margin-left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
