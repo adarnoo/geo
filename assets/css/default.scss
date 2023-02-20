@@ -151,6 +151,7 @@ button:hover {
   background-color: $ge-red;
   border: 1px solid black;
   text-transform: uppercase;
+  z-index: 10;
 
   a {
     &:hover {
@@ -188,6 +189,7 @@ button:hover {
 .ge-feed-split-container {
   width: 100%;
   display: flex;
+  position: relative;
 
   .ge-image {
     width: 50%;
@@ -196,6 +198,20 @@ button:hover {
     &:first-child {
       border-right: 0px;
     }
+  }
+
+  .ge-feed-split-container-cta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    text-transform: uppercase;
+    color: white;
   }
 }
 
@@ -242,8 +258,78 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: flash-text 0.5s infinite;
+  text-decoration: underline;
+
+  a {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes flash-text {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.33;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
 }
 
 .ge-footer-list-container {
   display: flex;
+}
+
+/* Shop Styling */
+
+.ge-shop-feed-container {
+  width: 100%;
+  padding-top: 25px;
+}
+
+.ge-shop-feed-split-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ge-shop-feed-product {
+  width: 50%;
+  display: flex;
+  margin-bottom: 25px;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    .ge-shop-product-info {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+}
+
+.ge-shop-product-info {
+  width: 50%;
+  list-style: none;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.ge-shop-product-image {
+  width: 50%;
+  padding: 0 20px;
+
+   img {
+     border: 1px solid black;
+   }
 }
