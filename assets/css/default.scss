@@ -191,12 +191,25 @@ button:hover {
   display: flex;
   position: relative;
 
+  @include max-tablet-portrait {
+    flex-direction: column;
+  }
+
   .ge-image {
     width: 50%;
     border: 1px solid black;
 
+    @include max-tablet-portrait {
+      width: 100%;
+    }
+
     &:first-child {
       border-right: 0px;
+
+      @include max-tablet-portrait {
+        border-right: 1px solid black;
+        border-bottom: 0px;
+      }
     }
   }
 
@@ -225,6 +238,11 @@ button:hover {
   padding: 5px;
   border: 1px solid black;
   border-top: 0px;
+
+  @include max-tablet-portrait {
+    flex-direction: column-reverse;
+    padding-bottom: 100px;
+  }
 }
 
 .ge-footer-title {
@@ -237,6 +255,10 @@ button:hover {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
+
+  @include max-tablet-portrait {
+    width: 100%;
+  }
 }
 
 .ge-footer-list {
@@ -247,6 +269,12 @@ button:hover {
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+
+  &:last-child {
+    @include max-tablet-portrait {
+      padding-left: 5px;
     }
   }
 }
@@ -260,6 +288,12 @@ button:hover {
   align-items: center;
   animation: flash-text 0.5s infinite;
   text-decoration: underline;
+
+  @include max-tablet-portrait {
+    font-size: 12vw;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+  }
 
   a {
     &:hover {
@@ -284,6 +318,10 @@ button:hover {
 
 .ge-footer-list-container {
   display: flex;
+
+  @include max-tablet-portrait {
+    width: 100%;
+  }
 }
 
 /* Shop Styling */
@@ -296,12 +334,32 @@ button:hover {
 .ge-shop-feed-split-container {
   display: flex;
   flex-wrap: wrap;
+
+  @include max-tablet-portrait {
+    margin: 0 12.5px 100px 12.5px;
+  }
 }
 
 .ge-shop-feed-product {
   width: 50%;
   display: flex;
   margin-bottom: 25px;
+
+  @include max-tablet-portrait {
+    flex-direction: column-reverse !important;
+    align-items: center;
+
+    .ge-shop-product-info {
+      align-items: flex-start;
+      text-align: left;
+      width: calc(100% - 25px);
+      padding: 10px 0 0 0;
+    }
+
+    .ge-shop-product-image {
+      width: calc(100% - 25px);
+    }
+  }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
