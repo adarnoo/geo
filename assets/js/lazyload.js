@@ -14,7 +14,7 @@
         while (i--) {
             var wH = window.innerHeight;
             var offset = 100;
-            var yPosition = images[i].getBoundingClientRect().top - wH;
+            var yPosition = images[i].getBoundingClientRect();
 
             // if the top of the image is within 100px from the bottom of the viewport
 
