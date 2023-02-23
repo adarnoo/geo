@@ -1,3 +1,7 @@
+var lazyLoadInstance = new LazyLoad({
+  // Your custom settings go here
+});
+
 $('.ge-slider').slick({
   infinite: true,
   slidesToShow: 1,
