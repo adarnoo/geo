@@ -27,7 +27,8 @@ li {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 img.lazy {
@@ -38,9 +39,7 @@ img:not(.initial) {
   transition: opacity 1s;
 }
 
-img.initial,
-img.loaded,
-img.error {
+img.initial, img.loaded, img.error {
   opacity: 1;
 }
 

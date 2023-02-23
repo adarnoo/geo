@@ -117,24 +117,25 @@ li {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 img.lazy {
-        opacity: 0;
-      }
-      img:not(.initial) {
-        transition: opacity 1s;
-      }
-      img.initial,
-      img.loaded,
-      img.error {
-        opacity: 1;
-      }
+  opacity: 0;
+}
 
-      img:not([src]) {
-        visibility: hidden;
-      }
+img:not(.initial) {
+  transition: opacity 1s;
+}
+
+img.initial, img.loaded, img.error {
+  opacity: 1;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
 
 video {
   width: 100%;
