@@ -1,6 +1,6 @@
-// var lazyLoadInstance = new LazyLoad({
-//   // Your custom settings go here
-// });
+$( function() {
+    $( "#draggable" ).draggable();
+  } );
 
 $('.ge-slider').slick({
   infinite: true,

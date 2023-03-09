@@ -93,7 +93,7 @@ $fs-breakpoint-large: 1800px !default;
   font-style: normal;
 }
 
-$ge-red: red;
+$ge-colour: lightgrey;
 
 * {
   box-sizing: border-box;
@@ -159,7 +159,7 @@ button:hover {
   left: 0;
   width: 100%;
   display: flex;
-  background-color: $ge-red;
+  background-color: $ge-colour;
   border: 1px solid black;
   text-transform: uppercase;
   z-index: 10;
@@ -225,16 +225,31 @@ button:hover {
   }
 }
 
+.ge-watermark-container {
+  position: absolute;
+  top: 10%;
+  left: 12%;
+  transform: rotate(-25deg);
+  width: 10%;
+
+  &:hover {
+    cursor: grab;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
 /* Footer Styling */
 
 .ge-footer-container {
   position: relative;
   display: flex;
-  background-color: $ge-red;
+  background-color: $ge-colour;
   text-transform: uppercase;
   padding: 5px;
   border: 1px solid black;
-  border-top: 0px;
 
   @include max-tablet-portrait {
     flex-direction: column-reverse;
