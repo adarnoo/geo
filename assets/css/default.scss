@@ -416,12 +416,11 @@ button:hover {
 
 .ge-pop-up-title {
   text-transform: uppercase;
-  font-size: 35px;
-  text-align: center;
+  font-size: 2vw;
   width: 100%;
   padding-bottom: 5px;
 
   @include max-tablet-landscape {
-    font-size: 30px;
+    font-size: 2vw;
   }
 }
